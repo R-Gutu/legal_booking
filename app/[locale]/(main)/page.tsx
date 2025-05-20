@@ -1,9 +1,12 @@
+import Home from "./_components/Home";
+import Team from "./_components/Team";
 
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="h-[2000px]">
-      Home
+    <div className="">
+      <Home/>
+      <Team/>
     </div>
   );
 }
