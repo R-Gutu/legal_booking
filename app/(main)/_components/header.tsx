@@ -11,7 +11,7 @@ const Header = () => {
           className=""/>
         <div className="flex gap-2.5">
             <div className="">+373 68099992</div>
-            <div className="">Contacteaza-ne</div>
+            <div className="text-transparent bg-white ">Contacteaza-ne</div>
         </div>
     </div>
   )
