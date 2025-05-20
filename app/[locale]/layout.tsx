@@ -3,6 +3,7 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { Inter } from 'next/font/google'
 import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 import { getLocale } from "next-intl/server";
 
 const inter = Inter({
@@ -30,11 +31,11 @@ export default async function RootLayout({
   const locale = await getLocale();
   return (
     <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
-      <body
-      >
+      <body>
         <NextIntlClientProvider >
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
