@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div>
       <div
-        className={cn(`fixed left-0 right-0 flex justify-between items-center pt-8 pl-[5%] pr-[15%] z-50 h-[135px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
+        className={cn(`font-inter fixed left-0 right-0 flex justify-between items-center pt-8 pl-[5%] pr-[15%] z-50 h-[135px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
         style={{
           backgroundColor: `rgba(0, 61, 53, ${scroll.y / 200})`,
           boxShadow: `0px 0px 15px 20px rgba(0, 61, 53, ${scroll.y / 200})`

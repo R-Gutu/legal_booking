@@ -4,7 +4,7 @@ import Team from "./_components/Team";
 
 export default function page() {
   return (
-    <div className="">
+    <div className="font-playfair">
       <Home/>
       <Team/>
     </div>

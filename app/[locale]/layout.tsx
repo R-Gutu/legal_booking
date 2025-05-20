@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { Inter } from 'next/font/google'
-import Header from "./(main)/_components/Header";
+import Header from "./_components/Header";
 import { getLocale } from "next-intl/server";
 
 const inter = Inter({
-  subsets: ['latin', 'cyrillic']
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter'
 })
 
 import { Playfair_Display } from 'next/font/google';
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'], // Choose weights you need
-  variable: '--font-playfair', // Optional: for CSS variable
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-playfair'
 });
 
 export const metadata: Metadata = {
@@ -29,9 +29,8 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
       <body
-      className={`${playfair.className}`}
       >
         <NextIntlClientProvider >
           <Header />

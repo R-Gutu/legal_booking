@@ -3,3 +3,8 @@
 body {
     background-color: #003D35;
 }
+
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
