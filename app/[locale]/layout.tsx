@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 
-import Header from "../(main)/_components/header";
+import Header from "./(main)/_components/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
