@@ -1,18 +1,57 @@
+'use client'
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react"
+import LanguageSwitcher from "./LanguageSwitcher"
+import { useTranslations } from "next-intl"
 
 const Header = () => {
+  const t = useTranslations();
+
+  const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
+  const [scrollAmount, setScrollAmount] = useState({ oldScroll: 'up', amount: 0 });
+
+
+  useEffect(() => {
+    if (scroll.dir !== scrollAmount.oldScroll) {
+      setScrollAmount({ oldScroll: scroll.dir, amount: 0 })
+    } else {
+      setScrollAmount(prev => ({ oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y }))
+    }
+  }, [scroll, scrollAmount.oldScroll])
+
+  useEffect(() => {
+    const onScroll = () => setScroll(prev => ({ y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up' }));
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <div className="flex justify-between items-center bg-[#003D35]">
-        <Image
-          src="/images/logo.png"
-          alt="Logo"
-          width={100}
-          height={100} 
-          className=""/>
-        <div className="flex gap-2.5">
-            <div className="">+373 68099992</div>
-            <div className="text-transparent bg-white ">Contacteaza-ne</div>
+    <div>
+      <div
+        className={cn(`fixed left-0 right-0 flex justify-between items-center pt-8 pl-[5%] pr-[15%] z-50 h-[135px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
+        style={{
+          backgroundColor: `rgba(0, 61, 53, ${scroll.y / 200})`,
+          boxShadow: `0px 0px 15px 20px rgba(0, 61, 53, ${scroll.y / 200})`
+        }}
+      >
+        <Image src='/svgs/logo.svg' width={74} height={74} alt="logo" />
+        <div className="flex gap-5 items-center">
+          <div className="flex items-center gap-10 align-middle text-center">
+            <div className="box-border border-1 border-white text-white rounded-full px-8 py-5 font-semibold text-sm">
+              +373 68099992
+            </div>
+            <div className="max-[690px]:hidden box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+              Contactează-ne
+            </div>
+          </div>
+          <LanguageSwitcher className="max-[690px]:hidden"/>
         </div>
+
+      </div>
+      <div className="w-full h-[135px]"></div>
     </div>
   )
 }
