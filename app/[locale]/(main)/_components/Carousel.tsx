@@ -2,6 +2,7 @@ import { ReactElement, useState } from "react"
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 export default function Carousel({ slides }: { slides: ReactElement[] }) {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -9,16 +10,18 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
 
     const [sliderRef, instanceRef] = useKeenSlider(
         {
-            slideChanged() {
-                console.log('slide changed')
+            initial: 0,
+            slideChanged(slider) {
+                setCurrentSlide(slider.track.details.rel)
             },
+            loop: true
         },
         [
             // add plugins here
         ]
     )
 
-    return (<div ref={sliderRef} className="keen-slider flex">
+    return (<div ref={sliderRef} className="keen-slider flex pb-20">
         {slides}
         <Image
             onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
@@ -26,7 +29,7 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
             height={25}
             width={15}
             alt="right arrow"
-            className="absolute top-[50%] right-[15%] cursor-pointer"
+            className="absolute top-[50%] right-[15%] cursor-pointer max-[500px]:right-[5%]"
         />
         <Image
             onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()}
@@ -34,11 +37,15 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
             height={25}
             width={15}
             alt="right arrow"
-            className="absolute top-[50%] left-[15%] cursor-pointer"
+            className="absolute top-[50%] left-[15%] cursor-pointer max-[500px]:left-[5%]"
         />
+        <div className="absolute flex gap-5 bottom-0 left-1/2 -translate-x-1/2">
+            {slides.map((e, i) => <div
+                key={i}
+                className={cn(`bg-white w-[8px] h-[8px] rounded-full cursor-pointer`, { 'opacity-20': currentSlide !== i })}
+                onClick={e => instanceRef.current?.moveToIdx(i)}
+            ></div>)}
+        </div>
     </div>
-        // <div className="">         
-
-        // </div>
     )
 }
