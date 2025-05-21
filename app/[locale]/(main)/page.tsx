@@ -8,12 +8,12 @@ import FAQ from "./_components/FAQ";
 export default function page() {
   return (
     <div className="font-playfair">
-      {/* <Home/> */}
-      {/* <Team/> */}
-      {/* <Services /> */}
+      <Home/>
+      <Team/>
+      <Services />
       {/* <WhyChooseUs /> */}
-      <Vouches />
-      <FAQ />
+      {/* <Vouches /> */}
+      {/* <FAQ /> */}
     </div>
   );
 }

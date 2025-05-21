@@ -3,7 +3,7 @@ import Image from "next/image"
 const Home = () => {
   return (
     <div className="flex gap-4 bg-[#003D35] px-[150px] py-[50px]">
-        <div className="flex flex-col gap-4 px-[100px] mt-10 justify-center">
+        <div className="flex flex-col gap-4 px-[100px] mt-10 justify-center z-10">
             <h1 className="text-7xl leading-23 text-white font-bold text-left">Servicii legale rapide, clare și fără complicații</h1>
             <p className="text-[#2D9285] text-base text-start">Suntem alături de afacerea ta cu soluții juridice moderne: consultanță online, contracte personalizate, înregistrări rapide și suport complet pe bază de abonament.</p>
             <div className="flex gap-4 justify-evenly items-center">
@@ -31,7 +31,7 @@ const Home = () => {
                     alt="home"
                     width={500}
                     height={500}
-                    className="absolute top-[-50px] left-[-110px] "
+                    className="absolute top-[-50px] left-[-110px] z-10"
                 />
             <Image 
                     src="/images/riscuri.png"
