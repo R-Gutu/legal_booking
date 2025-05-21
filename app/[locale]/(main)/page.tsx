@@ -13,7 +13,7 @@ export default function page() {
       {/* <Services /> */}
       {/* <WhyChooseUs /> */}
       {/* <Vouches /> */}
-      <FAQ />
+      {/* <FAQ /> */}
     </div>
   );
 }
