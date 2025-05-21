@@ -78,7 +78,7 @@ export default function Services() {
                 </div>)}
             </div>
             <div className="flex flex-col self-center mb-30">
-                <Image src="/svgs/hammer.svg" width={220} height={190} alt="hammer" className="self-center"/>
+                <Image src="/gifs/hammer.gif" width={220} height={190} alt="hammer" className="self-center"/>
                 <p className="uppercase font-playfair font-bold text-[30px] text-[#1B1E21]">Pachet cu abonament lunar sau anual</p>
                 <p className="max-w-[620px] font-inter text-[16px] text-[#3F4242]">
                     Rezolvăm orice întrebare juridică a companiei tale.<br />
