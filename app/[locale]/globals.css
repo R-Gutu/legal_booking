@@ -8,3 +8,7 @@ body {
   --font-inter: var(--font-inter);
   --font-playfair: var(--font-playfair);
 }
+
+@theme {
+  --breakpoint-xs: 464px;
+}
