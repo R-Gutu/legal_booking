@@ -1,4 +1,6 @@
 import Image from "next/image"
+import LanguageSwitcher from "./LanguageSwitcher"
+
 export default function Footer() {
     return (
         <div className="bg-[#D2DE32] overflow-x-hidden">
@@ -45,7 +47,11 @@ export default function Footer() {
                 </div>
             </div>
             <div className="bg-[#003D35] pl-[12%] max-[600px]:pl-7 max-[600px]:pr-20 py-10 flex flex-col gap-8 font-inter rounded-tr-[200px]">
-                <Image src="/svgs/logo_footer.svg" width={74} height={74} alt="footer_logo"/>
+                <div className="flex items-center relative">
+                    <Image src="/svgs/logo_footer.svg" width={74} height={74} alt="footer_logo"/>
+                    <LanguageSwitcher className="absolute top-[15%] right-[30%] min-[690px]:hidden" />
+                </div>
+                
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">Oferim soluții juridice rapide și eficiente pentru afacerea ta. Consultanță, redactare acte, înregistrări și reprezentare — totul într-un singur loc.</p>
                 <div className="flex items-center gap-4">
                     <Image src="/svgs/insta.svg" width={41} height={41} alt="instagram logo" />

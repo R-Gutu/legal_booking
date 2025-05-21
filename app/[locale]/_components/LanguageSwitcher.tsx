@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";;
 
-export default function LanguageSwitcher({ className }: { className: string }) {
+export default function LanguageSwitcher({ className }: { className?: string }) {
     const path = usePathname();
     const locale = useLocale().toUpperCase();
 

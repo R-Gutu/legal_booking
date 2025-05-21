@@ -7,11 +7,11 @@ import Vouches from "./_components/Vouches";
 export default function page() {
   return (
     <div className="font-playfair">
-      <Home/>
-      <Team/>
-      <Services />
-      <WhyChooseUs />
-      <Vouches />
+      {/* <Home/> */}
+      {/* <Team/> */}
+      {/* <Services /> */}
+      {/* <WhyChooseUs /> */}
+      {/* <Vouches /> */}
     </div>
   );
 }

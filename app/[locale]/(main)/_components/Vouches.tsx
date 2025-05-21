@@ -32,7 +32,7 @@ export default function Vouches() {
         }
     ]
     return (
-        <div className='flex flex-col justify-center items-center pb-20 w-full relative overflow-hidden'>
+        <div className='flex flex-col justify-center items-center py-20 w-full relative overflow-hidden'>
             <p className='text-[50px] font-playfair font-bold text-white text-center mb-10 max-[550px]:text-[35px]'>Clienții noștri ne <br /> recomandă</p>
             <div className='absolute bg-[#002C26] w-[500px] h-[1000px] rounded-full bottom-[-75%] right-0 -z-10 opacity-30'></div>
             <div className='absolute bg-[#002C26] w-[500px] h-[1000px] rounded-full top-[-75%] left-0 -z-10 opacity-30'></div>
