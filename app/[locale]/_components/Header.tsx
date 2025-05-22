@@ -7,11 +7,10 @@ import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
 
 const Header = () => {
-  const t = useTranslations();
+  const t = useTranslations('header');
 
   const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
   const [scrollAmount, setScrollAmount] = useState({ oldScroll: 'up', amount: 0 });
-
 
   useEffect(() => {
     if (scroll.dir !== scrollAmount.oldScroll) {
@@ -37,19 +36,18 @@ const Header = () => {
           boxShadow: `0px 0px 15px 20px rgba(0, 61, 53, ${scroll.y / 200})`
         }}
       >
-        <Image src='/svgs/logo.svg' width={74} height={74} alt="logo" />
+        <Image src='/svgs/logo.svg' width={74} height={74} alt={t('logoAlt')} />
         <div className="flex gap-5 items-center">
           <div className="flex items-center gap-10 align-middle text-center">
             <div className="box-border border-1 border-white text-white rounded-full px-8 py-5 font-semibold text-sm">
-              +373 68099992
+              {t('phone')}
             </div>
             <div className="max-[690px]:hidden box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
-              Contactează-ne
+              {t('contactBtn')}
             </div>
           </div>
           <LanguageSwitcher className="max-[690px]:hidden"/>
         </div>
-
       </div>
       <div className="w-full h-[135px]"></div>
     </div>
