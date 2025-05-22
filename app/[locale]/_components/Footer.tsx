@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
+import { AnimatePresence } from "motion/react";
+import { useState } from "react";
+import FormModal from './FormModal'
 
 export default function Footer() {
     const t = useTranslations("footer");
+    const [modalOpen, setModalOpen] = useState(false)
 
     return (
         <div className="bg-[#D2DE32] overflow-x-hidden">
@@ -44,7 +49,7 @@ export default function Footer() {
                 <div className="flex flex-col items-start max-[1000px]:items-center gap-7 px-10">
                     <p className="font-bold text-4xl font-playfair max-[1000px]:text-center">{t("ctaTitle")}</p>
                     <p className="font-inter max-[1000px]:text-center">{t("ctaDescription")}</p>
-                    <div className="button-animation font-inter box-border border-1 border-black bg-black text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+                    <div onClick={() => setModalOpen(true)} className="button-animation font-inter box-border border-1 border-black bg-black text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
                         {t("contactBtn")}
                     </div>
                 </div>
@@ -54,13 +59,16 @@ export default function Footer() {
                     <Image src="/svgs/logo_footer.svg" width={74} height={74} alt={t("logoAlt")} />
                     <LanguageSwitcher className="absolute top-[15%] right-[30%] min-[690px]:hidden" />
                 </div>
-                
+
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
                 <div className="flex items-center gap-4">
-                    <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")}  className="button-animation"/>
+                    <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")} className="button-animation" />
                     <p className="text-[#ffffff7e] text-[15px] max-[600px]:text-center">{t("copyRight")}</p>
                 </div>
             </div>
+            <AnimatePresence>
+                {modalOpen && <FormModal isOpen={modalOpen} setIsOpen={setModalOpen} />}
+            </AnimatePresence>
         </div>
     )
 }

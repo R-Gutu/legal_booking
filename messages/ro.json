@@ -1,8 +1,8 @@
 {
-    "test": {
-        "testing": "romanian"
-    },
-    "homeHero": {
+  "test": {
+    "testing": "romanian"
+  },
+  "homeHero": {
     "title": "Servicii legale rapide, clare și fără complicații",
     "description": "Suntem alături de afacerea ta cu soluții juridice moderne: consultanță online, contracte personalizate, înregistrări rapide și suport complet pe bază de abonament.",
     "seeServices": "Vezi servicii",
@@ -11,179 +11,226 @@
     "imageAlt": "imagine principală",
     "linesAlt": "decor linii",
     "imageSrc": "/images/homero.png"
+  },
+  "teamHero": {
+    "title": "Echipa noastră juridică este pregătită să răspundă tuturor nevoilor tale",
+    "description": "Oferim sprijin complet, de la înființare până la redactarea contractelor și gestionarea legală de zi cu zi. Totul rapid, clar și fără complicații.",
+    "bullets": [
+      "Înființare sau lichidare SRL/IP în 3 zile",
+      "Contracte personalizate, redactare și revizuire",
+      "Suport complet pentru granturi, achiziții și licitații",
+      "Consultanță juridică pentru afaceri și familie"
+    ],
+    "seeServices": "Vezi servicii",
+    "callNow": "sună acum +373 68099992",
+    "consultation": "Online consultație!",
+    "imageAlt": "echipa",
+    "consultationAlt": "consultație online",
+    "linesAlt": "linii decorative",
+    "starAlt": "stea"
+  },
+  "services": {
+    "title": "Serviciile noastre",
+    "description": "Găsești tot sprijinul juridic de care ai nevoie, într-un singur loc. Indiferent dacă ai nevoie de asistență pentru documente, reprezentare în instanță sau sprijin rapid online — echipa noastră este gata să intervină.",
+    "items": [
+      {
+        "title": "Consultanță și abonamente",
+        "icon": "/svgs/pillar.svg",
+        "points": [
+          "Consultanță juridică generală",
+          "Abonament lunar/anual pentru companii",
+          "Asistență în fața instituțiilor de stat (FISC, primării etc.)",
+          "Pregătire licitații, achiziții, granturi"
+        ]
+      },
+      {
+        "title": "Contracte și înregistrări",
+        "icon": "/svgs/note.svg",
+        "points": [
+          "Revizuire și redactare contracte comerciale",
+          "Întocmirea documentelor pentru SRL/IP",
+          "Înregistrare și lichidare SRL în 3 zile"
+        ]
+      },
+      {
+        "title": "Reprezentare legală",
+        "icon": "/svgs/person.svg",
+        "points": [
+          "Reprezentare în instanță (civil, contravențional, penal)",
+          "Mediere & soluționare conflicte",
+          "Suport dosare CEDO"
+        ]
+      },
+      {
+        "title": "Online și digital",
+        "icon": "/svgs/search.svg",
+        "points": [
+          "Consultanță juridică online",
+          "Asistență rapidă fără programare, direct din platformă"
+        ]
+      },
+      {
+        "title": "Proprietate intelectuală",
+        "icon": "/svgs/coin.svg",
+        "points": [
+          "Înregistrări AGEPI",
+          "Protecția drepturilor de autor și mărci"
+        ]
+      },
+      {
+        "title": "Speciale",
+        "icon": "/svgs/scales.svg",
+        "points": [
+          "Asistență accidente rutiere (cu broker)",
+          "Dreptul familiei (custodie, partaj etc.)"
+        ]
+      }
+    ],
+    "packageTitle": "Pachet cu abonament lunar sau anual",
+    "packageDescription": "Rezolvăm orice întrebare juridică a companiei tale. Încheie un contract anual, achiți lunar și primești suport juridic continuu — fără griji, fără complicații."
+  },
+  "whyChooseUs": {
+    "title": "De ce să alegi echipa noastră?",
+    "description": "Avem peste 15 ani de experiență în domeniul juridic, oferind soluții clare, rapide și eficiente pentru afaceri de orice dimensiune. Ne concentrăm pe rezultate și ne adaptăm nevoilor fiecărui client — indiferent dacă ai nevoie de consultanță, reprezentare sau redactare de acte.",
+    "highlights": [
+      "Expertiză solidă",
+      "Rezultate concrete",
+      "Abordare orientată către client",
+      "Servicii personalizate"
+    ],
+    "seeServices": "Vezi servicii",
+    "callNow": "sună acum +373 68099992",
+    "imageAlt": "întâlnire de afaceri",
+    "iconAlt": "bifat",
+    "imageSrc": "/images/meetingro.png"
+  },
+  "vouches": {
+    "title": "Clienții noștri ne \n recomandă",
+    "list": [
+      {
+        "image": "/images/vouch1.png",
+        "text": "„Colaborarea cu LegalBooking a fost una dintre cele mai bune decizii pentru afacerea mea. Totul a fost clar, rapid și profesionist. Recomand cu încredere.”",
+        "title": "Elena T., fondatoare startup"
+      },
+      {
+        "image": "/images/vouch2.jpg",
+        "text": "„Am fost impresionat de atenția la detalii și de comunicarea constantă. Echipa LegalBooking a reușit să rezolve o situație complexă într-un timp record.”",
+        "title": "Mihai D., avocat"
+      },
+      {
+        "image": "/images/vouch3.png",
+        "text": "„Serviciile lor mi-au oferit liniștea necesară pentru a mă concentra pe business. Sunt rapizi, eficienți și mereu disponibili.”",
+        "title": "Roxana V., manager proiect"
+      },
+      {
+        "image": "/images/vouch4.jpg",
+        "text": "„Lucrez cu LegalBooking de peste un an și mereu au fost alături de mine când am avut nevoie. Un partener de încredere.”",
+        "title": "Cătălin P., antreprenor tech"
+      },
+      {
+        "image": "/images/vouch5.png",
+        "text": "„Am avut plăcerea de a colabora cu echipa LegalBooking și pot afirma cu încredere că sunt printre cei mai buni din domeniu. Profesionalismul, dedicarea și soluțiile clare oferite mi-au depășit așteptările. Sunt recunoscător pentru sprijinul lor constant.”",
+        "title": "Andrei M., antreprenor"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "questions": [
+      {
+        "question": "Ce tipuri de servicii juridice oferiți pentru companii?",
+        "answer": "Oferim consultanță generală, redactarea și revizuirea contractelor, înregistrarea și lichidarea firmelor, asistență în fața instituțiilor de stat și sprijin juridic permanent prin abonament lunar sau anual."
+      },
+      {
+        "question": "Ce presupune pachetul de abonament juridic lunar?",
+        "answer": "Acest pachet vă oferă acces la toate serviciile noastre de bază — consultanță, redactare acte, interacțiune cu instituțiile publice — cu un tarif fix lunar și suport prioritar."
+      },
+      {
+        "question": "Cât durează înregistrarea unei firme SRL sau ÎI?",
+        "answer": "În mod obișnuit, procesul de înregistrare durează până la 3 zile lucrătoare, în funcție de complexitate și documentele furnizate."
+      },
+      {
+        "question": "Ajutați și cu înregistrarea drepturilor de autor sau a mărcilor?",
+        "answer": "Da, oferim suport complet pentru procedurile AGEPI privind proprietatea intelectuală."
+      },
+      {
+        "question": "Cum pot beneficia de consultanță juridică online?",
+        "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 68099992."
+      },
+      {
+        "question": "Puteți reprezenta firma mea în instanță sau în fața organelor de stat?",
+        "answer": "Da, oferim reprezentare juridică în instanță pentru cauze civile, contravenționale și penale, dar și sprijin în relația cu instituțiile statului (FISC, primării etc.)."
+      }
+    ]
+  },
+  "header": {
+    "logoAlt": "siglă",
+    "phone": "+373 68099992",
+    "contactBtn": "Contactează-ne"
+  },
+  "footer": {
+    "pfpAlt": "poza profil advokat",
+    "profileName": "Veaceslav Soltan",
+    "profileRole": "Jurist",
+    "phoneIconAlt": "icon telefon",
+    "mailIconAlt": "icon scrisoare",
+    "callUs": "Sună-ne:",
+    "mailUs": "Scrie-ne:",
+    "phoneNumber": "+373 464564654",
+    "email": "law@domain.com",
+    "ctaTitle": "Vorbește cu un jurist chiar astăzi",
+    "ctaDescription": "Ai o întrebare juridică?\nProgramează o consultație și primește răspuns rapid de la echipa noastră.",
+    "contactBtn": "Contactează-ne",
+    "logoAlt": "sigla footer",
+    "footerDescription": "Oferim soluții juridice rapide și eficiente pentru afacerea ta. Consultanță, redactare acte, înregistrări și reprezentare — totul într-un singur loc.",
+    "instagramAlt": "logo instagram",
+    "copyRight": "© 2025 Legalbooking. Toate drepturile sunt rezervate."
+  },
+  "contactForm": {
+    "fields": {
+      "fullName": "Nume complet",
+      "fullNamePH": "(Introduceți numele Dvs.)",
+      "email": "Email",
+      "emailPH": "(Introduceți emailul Dvs.)",
+      "message": "Mesajul dvs.",
+      "messagePH": "(Descrie proiectul, obiectivele și așteptările tale)",
+      "contact": "Datele de contact",
+      "contactPH": "(06548954)",
+      "selectedFiles": "Fișiere selectate:"
     },
-    "teamHero": {
-  "title": "Echipa noastră juridică este pregătită să răspundă tuturor nevoilor tale",
-  "description": "Oferim sprijin complet, de la înființare până la redactarea contractelor și gestionarea legală de zi cu zi. Totul rapid, clar și fără complicații.",
-  "bullets": [
-    "Înființare sau lichidare SRL/IP în 3 zile",
-    "Contracte personalizate, redactare și revizuire",
-    "Suport complet pentru granturi, achiziții și licitații",
-    "Consultanță juridică pentru afaceri și familie"
-  ],
-  "seeServices": "Vezi servicii",
-  "callNow": "sună acum +373 68099992",
-  "consultation": "Online consultație!",
-  "imageAlt": "echipa",
-  "consultationAlt": "consultație online",
-  "linesAlt": "linii decorative",
-  "starAlt": "stea"
-},
-"services": {
-  "title": "Serviciile noastre",
-  "description": "Găsești tot sprijinul juridic de care ai nevoie, într-un singur loc. Indiferent dacă ai nevoie de asistență pentru documente, reprezentare în instanță sau sprijin rapid online — echipa noastră este gata să intervină.",
-  "items": [
-    {
-      "title": "Consultanță și abonamente",
-      "icon": "/svgs/pillar.svg",
-      "points": [
-        "Consultanță juridică generală",
-        "Abonament lunar/anual pentru companii",
-        "Asistență în fața instituțiilor de stat (FISC, primării etc.)",
-        "Pregătire licitații, achiziții, granturi"
-      ]
+    "buttons": {
+      "submit": "Trimite",
+      "submitting": "Se trimite..."
     },
-    {
-      "title": "Contracte și înregistrări",
-      "icon": "/svgs/note.svg",
-      "points": [
-        "Revizuire și redactare contracte comerciale",
-        "Întocmirea documentelor pentru SRL/IP",
-        "Înregistrare și lichidare SRL în 3 zile"
-      ]
+    "validation": {
+      "name": {
+        "required": "Numele complet este obligatoriu",
+        "minLength": "Trebuie să aibă cel puțin 3 caractere"
+      },
+      "email": {
+        "required": "Emailul este obligatoriu",
+        "invalid": "Format email invalid"
+      },
+      "contact": {
+        "required": "Datele de contact sunt obligatorii",
+        "minLength": "Trebuie să conțină cel puțin 8 caractere"
+      },
+      "message": {
+        "required": "Mesajul este obligatoriu",
+        "minLength": "Trebuie să conțină cel puțin 10 caractere"
+      }
     },
-    {
-      "title": "Reprezentare legală",
-      "icon": "/svgs/person.svg",
-      "points": [
-        "Reprezentare în instanță (civil, contravențional, penal)",
-        "Mediere & soluționare conflicte",
-        "Suport dosare CEDO"
-      ]
-    },
-    {
-      "title": "Online și digital",
-      "icon": "/svgs/search.svg",
-      "points": [
-        "Consultanță juridică online",
-        "Asistență rapidă fără programare, direct din platformă"
-      ]
-    },
-    {
-      "title": "Proprietate intelectuală",
-      "icon": "/svgs/coin.svg",
-      "points": [
-        "Înregistrări AGEPI",
-        "Protecția drepturilor de autor și mărci"
-      ]
-    },
-    {
-      "title": "Speciale",
-      "icon": "/svgs/scales.svg",
-      "points": [
-        "Asistență accidente rutiere (cu broker)",
-        "Dreptul familiei (custodie, partaj etc.)"
-      ]
+    "notifications": {
+      "success": "Formular trimis cu succes!",
+      "error": "Trimiterea formularului a eșuat. Vă rugăm să încercați din nou."
     }
-  ],
-  "packageTitle": "Pachet cu abonament lunar sau anual",
-  "packageDescription": "Rezolvăm orice întrebare juridică a companiei tale. Încheie un contract anual, achiți lunar și primești suport juridic continuu — fără griji, fără complicații."
-},
-"whyChooseUs": {
-  "title": "De ce să alegi echipa noastră?",
-  "description": "Avem peste 15 ani de experiență în domeniul juridic, oferind soluții clare, rapide și eficiente pentru afaceri de orice dimensiune. Ne concentrăm pe rezultate și ne adaptăm nevoilor fiecărui client — indiferent dacă ai nevoie de consultanță, reprezentare sau redactare de acte.",
-  "highlights": [
-    "Expertiză solidă",
-    "Rezultate concrete",
-    "Abordare orientată către client",
-    "Servicii personalizate"
-  ],
-  "seeServices": "Vezi servicii",
-  "callNow": "sună acum +373 68099992",
-  "imageAlt": "întâlnire de afaceri",
-  "iconAlt": "bifat",
-  "imageSrc": "/images/meetingro.png"
-},
-"vouches": {
-  "title": "Clienții noștri ne \n recomandă",
-  "list": [
-    {
-      "image": "/images/vouch1.png",
-      "text": "„Colaborarea cu LegalBooking a fost una dintre cele mai bune decizii pentru afacerea mea. Totul a fost clar, rapid și profesionist. Recomand cu încredere.”",
-      "title": "Elena T., fondatoare startup"
-    },
-    {
-      "image": "/images/vouch2.jpg",
-      "text": "„Am fost impresionat de atenția la detalii și de comunicarea constantă. Echipa LegalBooking a reușit să rezolve o situație complexă într-un timp record.”",
-      "title": "Mihai D., avocat"
-    },
-    {
-      "image": "/images/vouch3.png",
-      "text": "„Serviciile lor mi-au oferit liniștea necesară pentru a mă concentra pe business. Sunt rapizi, eficienți și mereu disponibili.”",
-      "title": "Roxana V., manager proiect"
-    },
-    {
-      "image": "/images/vouch4.jpg",
-      "text": "„Lucrez cu LegalBooking de peste un an și mereu au fost alături de mine când am avut nevoie. Un partener de încredere.”",
-      "title": "Cătălin P., antreprenor tech"
-    },
-    {
-      "image": "/images/vouch5.png",
-      "text": "„Am avut plăcerea de a colabora cu echipa LegalBooking și pot afirma cu încredere că sunt printre cei mai buni din domeniu. Profesionalismul, dedicarea și soluțiile clare oferite mi-au depășit așteptările. Sunt recunoscător pentru sprijinul lor constant.”",
-      "title": "Andrei M., antreprenor"
-    }
-  ]
-},
-"faq": {
-  "title": "Întrebări frecvente",
-  "questions": [
-    {
-      "question": "Ce tipuri de servicii juridice oferiți pentru companii?",
-      "answer": "Oferim consultanță generală, redactarea și revizuirea contractelor, înregistrarea și lichidarea firmelor, asistență în fața instituțiilor de stat și sprijin juridic permanent prin abonament lunar sau anual."
-    },
-    {
-      "question": "Ce presupune pachetul de abonament juridic lunar?",
-      "answer": "Acest pachet vă oferă acces la toate serviciile noastre de bază — consultanță, redactare acte, interacțiune cu instituțiile publice — cu un tarif fix lunar și suport prioritar."
-    },
-    {
-      "question": "Cât durează înregistrarea unei firme SRL sau ÎI?",
-      "answer": "În mod obișnuit, procesul de înregistrare durează până la 3 zile lucrătoare, în funcție de complexitate și documentele furnizate."
-    },
-    {
-      "question": "Ajutați și cu înregistrarea drepturilor de autor sau a mărcilor?",
-      "answer": "Da, oferim suport complet pentru procedurile AGEPI privind proprietatea intelectuală."
-    },
-    {
-      "question": "Cum pot beneficia de consultanță juridică online?",
-      "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 68099992."
-    },
-    {
-      "question": "Puteți reprezenta firma mea în instanță sau în fața organelor de stat?",
-      "answer": "Da, oferim reprezentare juridică în instanță pentru cauze civile, contravenționale și penale, dar și sprijin în relația cu instituțiile statului (FISC, primării etc.)."
-    }
-  ]
-},
-"header":{
-  "logoAlt": "siglă",
-  "phone": "+373 68099992",
-  "contactBtn": "Contactează-ne"
-},
-"footer": {
-  "pfpAlt": "poza profil advokat",
-  "profileName": "Veaceslav Soltan",
-  "profileRole": "Jurist",
-  "phoneIconAlt": "icon telefon",
-  "mailIconAlt": "icon scrisoare",
-  "callUs": "Sună-ne:",
-  "mailUs": "Scrie-ne:",
-  "phoneNumber": "+373 464564654",
-  "email": "law@domain.com",
-  "ctaTitle": "Vorbește cu un jurist chiar astăzi",
-  "ctaDescription": "Ai o întrebare juridică?\nProgramează o consultație și primește răspuns rapid de la echipa noastră.",
-  "contactBtn": "Contactează-ne",
-  "logoAlt": "sigla footer",
-  "footerDescription": "Oferim soluții juridice rapide și eficiente pentru afacerea ta. Consultanță, redactare acte, înregistrări și reprezentare — totul într-un singur loc.",
-  "instagramAlt": "logo instagram",
-  "copyRight": "© 2025 Legalbooking. Toate drepturile sunt rezervate."
-}
+  },
+  "formAlert": {
+    "success": "Am primit mesajul tău! Echipa noastră îți va răspunde în cel mai scurt timp.",
+    "error": "Eroare la trimiterea formularului. Va rugам sa incercati din nou."
+  },
+  "dropzone": {
+    "browse": "Atașați fișierele aici pentru",
+    "dragFiles": "încărcare"
+  }
 }

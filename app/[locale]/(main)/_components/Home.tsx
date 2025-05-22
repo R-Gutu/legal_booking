@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
-const Home = () => {
+const Home = ({ scrollToServices } : {scrollToServices: () => void}) => {
   const t = useTranslations("homeHero");
 
   return (
@@ -14,28 +14,28 @@ const Home = () => {
         <p className={cn("text-[#2D9285] text-base text-start font-inter", "max-xl:text-sm max-lg:text-center")}>
           {t("description")}
         </p>
-        <div className={cn("w-full flex justify-evenly gap-6 items-center font-inter", "max-md:hidden")}>
-          <div className="button-animation text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
+        <div className={cn("w-full flex justify-between gap-6 items-center font-inter", "max-md:hidden")}>
+          <div onClick={scrollToServices} className="button-animation text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
             {t("seeServices")}
           </div>
           <p className="text-white">{t("callNow")}</p>
         </div>
         <div className="flex items-center justify-center">
-          <div className="md:hidden max-w-[300px] box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+          <div className="md:hidden font-inter max-w-[300px] box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
             {t("contact")}
           </div>
         </div>
       </div>
       <div className="w-full h-full flex max-lg:items-center max-lg:justify-center relative">
-        <Image 
+        <Image
           src={t("imageSrc")}
           alt={t("imageAlt")}
           width={700}
           height={700}
-          className={cn("z-10 lg:min-w-[500px]", "max-md:max-w-[400px] max-sm:max-w-[320px] max-[450px]:max-w-[300px] max-md:mt-0 max-sm:mb-10 max-lg:static max-lg:left-0 max-lg:top-0")}
+          className={cn("z-10 lg:min-w-[500px]", "max-md:max-w-[400px] max-sm:max-w-[320px] max-[450px]:max-w-[300px] max-md:mt-0 max-sm:mb-0 max-lg:static max-lg:left-0 max-lg:top-0")}
         />
       </div>
-      <Image 
+      <Image
         src="/images/lines1.png"
         alt={t("linesAlt")}
         width={500}

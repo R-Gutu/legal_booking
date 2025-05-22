@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 
 export default function Carousel({ slides }: { slides: ReactElement[] }) {
     const [currentSlide, setCurrentSlide] = useState(0)
-    const [loaded, setLoaded] = useState(false)
 
     const [sliderRef, instanceRef] = useKeenSlider(
         {
@@ -24,7 +23,7 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
     return (<div ref={sliderRef} className="keen-slider flex pb-20">
         {slides}
         <Image
-            onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
+            onClick={() => instanceRef.current?.next()}
             src="/svgs/rightArrow.svg"
             height={25}
             width={15}
@@ -32,7 +31,7 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
             className="absolute top-[50%] right-[15%] cursor-pointer max-[500px]:right-[5%]"
         />
         <Image
-            onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()}
+            onClick={() => instanceRef.current?.prev()}
             src="/svgs/leftArrow.svg"
             height={25}
             width={15}
@@ -43,7 +42,7 @@ export default function Carousel({ slides }: { slides: ReactElement[] }) {
             {slides.map((e, i) => <div
                 key={i}
                 className={cn(`bg-white w-[8px] h-[8px] rounded-full cursor-pointer`, { 'opacity-20': currentSlide !== i })}
-                onClick={e => instanceRef.current?.moveToIdx(i)}
+                onClick={() => instanceRef.current?.moveToIdx(i)}
             ></div>)}
         </div>
     </div>

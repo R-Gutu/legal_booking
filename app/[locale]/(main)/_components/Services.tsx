@@ -1,11 +1,11 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
-export default function Services() {
-    const t = useTranslations("services");
+export default function Services({ servicesRef }: { servicesRef: React.RefObject<HTMLDivElement | null> }) {
+    const t = useTranslations("services")
 
     return (
-        <div className="bg-white px-44 max-[1250px]:px-20 max-[760px]:px-10 pt-30 max-[760px]:pt-10 flex flex-col">
+        <div ref={servicesRef as React.RefObject<HTMLDivElement>} className="bg-white px-44 max-[1250px]:px-20 max-[760px]:px-10 pt-30 max-[760px]:pt-10 flex flex-col">
             <p className="font-playfair text-[50px] font-bold mb-3 text-[#1B1E21] max-[760px]:text-center max-[760px]:text-[35px]">
                 {t("title")}
             </p>

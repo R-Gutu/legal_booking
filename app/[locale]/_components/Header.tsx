@@ -1,13 +1,15 @@
 'use client'
-import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
+import FormModal from "./FormModal"
+import { AnimatePresence } from "motion/react";
 
 const Header = () => {
   const t = useTranslations('header');
+  const [modalOpen, setModalOpen] = useState(false)
 
   const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
   const [scrollAmount, setScrollAmount] = useState({ oldScroll: 'up', amount: 0 });
@@ -42,14 +44,17 @@ const Header = () => {
             <div className="box-border border-1 button-animation border-white text-white rounded-full px-8 py-5 font-semibold text-sm">
               {t('phone')}
             </div>
-            <div className="max-[690px]:hidden button-animation box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+            <div onClick={() => setModalOpen(true)} className="max-[690px]:hidden button-animation box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
               {t('contactBtn')}
             </div>
           </div>
-          <LanguageSwitcher className="max-[690px]:hidden"/>
+          <LanguageSwitcher className="max-[690px]:hidden" />
         </div>
       </div>
       <div className="w-full h-[135px]"></div>
+      <AnimatePresence>
+        {modalOpen && <FormModal isOpen={modalOpen} setIsOpen={setModalOpen} />}
+      </AnimatePresence>
     </div>
   )
 }
