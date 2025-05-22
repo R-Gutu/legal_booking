@@ -15,7 +15,7 @@ const Home = () => {
           {t("description")}
         </p>
         <div className={cn("w-full flex justify-evenly gap-6 items-center font-inter", "max-md:hidden")}>
-          <div className="text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
+          <div className="button-animation text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
             {t("seeServices")}
           </div>
           <p className="text-white">{t("callNow")}</p>

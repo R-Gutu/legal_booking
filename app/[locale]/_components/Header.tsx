@@ -39,10 +39,10 @@ const Header = () => {
         <Image src='/svgs/logo.svg' width={74} height={74} alt={t('logoAlt')} />
         <div className="flex gap-5 items-center">
           <div className="flex items-center gap-10 align-middle text-center">
-            <div className="box-border border-1 border-white text-white rounded-full px-8 py-5 font-semibold text-sm">
+            <div className="box-border border-1 button-animation border-white text-white rounded-full px-8 py-5 font-semibold text-sm">
               {t('phone')}
             </div>
-            <div className="max-[690px]:hidden box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+            <div className="max-[690px]:hidden button-animation box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
               {t('contactBtn')}
             </div>
           </div>

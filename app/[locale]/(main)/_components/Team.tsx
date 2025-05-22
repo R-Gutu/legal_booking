@@ -36,20 +36,21 @@ const Team = () => {
             ))}
         </ul>
         <div className={cn("flex gap-10 items-center mt-10 font-inter", "max-xl:mt-6 max-lg:mt-2 max-lg:justify-center max-sm:flex-col")}>
-          <div className="text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
+          <div className="button-animation text-[#141414] bg-[#D2DE32] px-8 py-4 rounded-full text-sm font-bold">
             {t("seeServices")}
           </div>
           <p className="text-white">{t("callNow")}</p>
         </div>
       </div>
       <div className={cn("absolute top-[950px] right-[100px] z-10 flex flex-col gap-2 items-center", "max-xl:hidden")}>
-        <p className="text-white font-inter font-semibold">{t("consultation")}</p>
         <Image 
           src="/images/consultatie.png"
           alt={t("consultationAlt")}
           width={80}
           height={80}
+          className="button-animation animate-bounce"
         />
+        <p className="text-white font-inter font-semibold">{t("consultation")}</p>
       </div>
       <Image 
         src="/images/lines2.png"

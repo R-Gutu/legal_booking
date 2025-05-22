@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
                   ))}
                 </div>
                 <div className="flex mt-15">
-                    <div className="font-inter box-border border-1 border-[#141414] bg-[#141414] text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+                    <div className="font-inter button-animation box-border border-1 border-[#141414] bg-[#141414] text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
                         {t("seeServices")}
                     </div>
                     <div className="font-inter box-border border-1 border-white bg-white text-[#141414] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">

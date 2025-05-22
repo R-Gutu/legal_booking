@@ -12,3 +12,11 @@ body {
 @theme {
   --breakpoint-xs: 464px;
 }
+
+.button-animation {
+  @apply cursor-pointer transition-transform duration-300 ease-in-out;
+}
+
+.button-animation:hover {
+  @apply transform scale-105;
+}

@@ -44,7 +44,7 @@ export default function Footer() {
                 <div className="flex flex-col items-start max-[1000px]:items-center gap-7 px-10">
                     <p className="font-bold text-4xl font-playfair max-[1000px]:text-center">{t("ctaTitle")}</p>
                     <p className="font-inter max-[1000px]:text-center">{t("ctaDescription")}</p>
-                    <div className="font-inter box-border border-1 border-black bg-black text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+                    <div className="button-animation font-inter box-border border-1 border-black bg-black text-white rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
                         {t("contactBtn")}
                     </div>
                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                 
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
                 <div className="flex items-center gap-4">
-                    <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")} />
+                    <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")}  className="button-animation"/>
                     <p className="text-[#ffffff7e] text-[15px] max-[600px]:text-center">{t("copyRight")}</p>
                 </div>
             </div>
