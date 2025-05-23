@@ -4,7 +4,6 @@ import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import useComponentVisible from "@/lib/hooks/useComponentVisible";
 import { motion, AnimatePresence } from "framer-motion";
-import { div } from "motion/react-m";
 
 const LanguageSwitcher = ({ className }: { className?: string }) => {
     const router = useRouter();

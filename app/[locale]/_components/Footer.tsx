@@ -59,7 +59,6 @@ export default function Footer() {
                     <Image src="/svgs/logo_footer.svg" width={74} height={74} alt={t("logoAlt")} />
                     <LanguageSwitcher className="absolute top-[35%] right-[30%] min-[690px]:hidden" />
                 </div>
-
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
                 <div className="flex items-center gap-4">
                     <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")} className="button-animation" />
