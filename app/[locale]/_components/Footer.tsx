@@ -57,7 +57,7 @@ export default function Footer() {
             <div className="bg-[#003D35] pl-[12%] max-[600px]:pl-7 max-[600px]:pr-20 py-10 flex flex-col gap-8 font-inter rounded-tr-[200px]">
                 <div className="flex items-center relative">
                     <Image src="/svgs/logo_footer.svg" width={74} height={74} alt={t("logoAlt")} />
-                    <LanguageSwitcher className="absolute top-[15%] right-[30%] min-[690px]:hidden" />
+                    <LanguageSwitcher className="absolute top-[35%] right-[30%] min-[690px]:hidden" />
                 </div>
 
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>

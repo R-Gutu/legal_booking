@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { Inter } from 'next/font/google'
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import Consultatia from "./_components/Consultatia";
 import { getLocale } from "next-intl/server";
 
 const inter = Inter({
@@ -38,7 +37,6 @@ export default async function RootLayout({
           <NextIntlClientProvider >
             <Header />
             {children}
-            <Consultatia />
             <Footer />
           </NextIntlClientProvider>
         </LazyMotion>

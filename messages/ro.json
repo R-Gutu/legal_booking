@@ -6,7 +6,7 @@
     "title": "Servicii legale rapide, clare și fără complicații",
     "description": "Suntem alături de afacerea ta cu soluții juridice moderne: consultanță online, contracte personalizate, înregistrări rapide și suport complet pe bază de abonament.",
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 68099992",
+    "callNow": "sună acum +373 60911862",
     "contact": "Contactează-ne",
     "imageAlt": "imagine principală",
     "linesAlt": "decor linii",
@@ -22,7 +22,7 @@
       "Consultanță juridică pentru afaceri și familie"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 68099992",
+    "callNow": "sună acum +373 60911862",
     "consultation": "Online consultație!",
     "imageAlt": "echipa",
     "consultationAlt": "consultație online",
@@ -99,7 +99,7 @@
       "Servicii personalizate"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 68099992",
+    "callNow": "sună acum +373 60911862",
     "imageAlt": "întâlnire de afaceri",
     "iconAlt": "bifat",
     "imageSrc": "/images/meetingro.png"
@@ -155,7 +155,7 @@
       },
       {
         "question": "Cum pot beneficia de consultanță juridică online?",
-        "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 68099992."
+        "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 60911862."
       },
       {
         "question": "Puteți reprezenta firma mea în instanță sau în fața organelor de stat?",
@@ -165,7 +165,7 @@
   },
   "header": {
     "logoAlt": "siglă",
-    "phone": "+373 68099992",
+    "phone": "+373 60911862",
     "contactBtn": "Contactează-ne"
   },
   "footer": {
