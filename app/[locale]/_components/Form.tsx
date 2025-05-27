@@ -36,12 +36,54 @@ export default function ProjectForm({ className }: { className?: string }) {
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  const onSubmit = async (data: ProjectFormData) => {
-    // send data here
-    setIsSubmitting(true)
-    console.log(data)
+  // const onSubmit = async (data: ProjectFormData) => {
+  //   // send data here
+  //   setIsSubmitting(true)
+  //   console.log(data)
+  //   setIsSubmitting(false)
+  // };
+
+ const onSubmit = async (data: { name: any; contact: any; email: any; message: any; }) => {
+  setIsSubmitting(true)
+  try {
+    // Собираем тело запроса по спецификации Bitrix24
+    const payload = {
+      fields: {
+        TITLE:    `Лид с сайта juristonline.md / ${data.contact}`,
+        NAME:     data.name,
+        PHONE:    [{ VALUE: data.contact, VALUE_TYPE: 'WORK' }],
+        EMAIL:    data.email ? [{ VALUE: data.email, VALUE_TYPE: 'WORK' }] : [],
+        COMMENTS: data.message,
+      },
+      params: { REGISTER_SONET_EVENT: 'Y' }
+    }
+
+    const res = await fetch(
+      'https://nobilauto.bitrix24.ru/rest/7780/hi4l2tytpr206uob/crm.lead.add.json',
+      {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      }
+    )
+    const json = await res.json()
+
+    if (json.result) {
+      console.log('Lead created, ID =', json.result)
+      setAlertIsOpen(true)
+      formRef.current?.reset()
+    } else {
+      console.error('Bitrix error:', json.error_description || json.error)
+      // alert('Ошибка: ' + (json.error_description || json.error))
+    }
+  } catch (err) {
+    console.error('Network error:', err)
+    // alert('Сетевая ошибка: ' + err.message)
+  } finally {
     setIsSubmitting(false)
-  };
+  }
+}
+
 
   const handleDrop = (acceptedFiles: File[]) => {
     setAttachments(acceptedFiles);
@@ -64,7 +106,7 @@ export default function ProjectForm({ className }: { className?: string }) {
         </div>
         <div className={`w-full flex flex-col gap-[20px] border-[1px] border-solid border-[#FFF] rounded-[8px] py-[24px] px-[40px] max-[600px]:px-[24px] max-[600px]:py-[18px] [box-shadow:0px_4px_4px_0px_#00000040]`}>
           <label htmlFor="message" className='text-[22px] max-[600px]:text-[16px]'>{t('fields.contact')}</label>
-          <input type="text" id="message" {...register("message")} placeholder={t('fields.contactPH')} className={`font-light appearance-none bg-transparent placeholder:text-[#E0E0E0] placeholder:text-[18px] max-[600px]:placeholder:text-[16px] border-b-[1px] border-[#333333] p-[6px] pl-0 outline-none focus:placeholder:opacity-0 resize-none`} />
+          <input type="text" id="message" {...register("contact")} placeholder={t('fields.contactPH')} className={`font-light appearance-none bg-transparent placeholder:text-[#E0E0E0] placeholder:text-[18px] max-[600px]:placeholder:text-[16px] border-b-[1px] border-[#333333] p-[6px] pl-0 outline-none focus:placeholder:opacity-0 resize-none`} />
           {errors.message && <span className="text-red-500 text-sm">{errors.message.message}</span>}
         </div>
         <div className={`w-full flex flex-col gap-[20px] border-[1px] border-solid border-[#FFF] rounded-[8px] py-[24px] px-[40px] max-[600px]:px-[24px] max-[600px]:py-[18px] [box-shadow:0px_4px_4px_0px_#00000040]`}>
