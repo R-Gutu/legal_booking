@@ -43,7 +43,7 @@ export default function ProjectForm({ className }: { className?: string }) {
   //   setIsSubmitting(false)
   // };
 
- const onSubmit = async (data: { name: any; contact: any; email: any; message: any; }) => {
+ const onSubmit = async (data: { name: string; contact: string; email: string; message: string; }) => {
   setIsSubmitting(true)
   try {
     // Собираем тело запроса по спецификации Bitrix24
