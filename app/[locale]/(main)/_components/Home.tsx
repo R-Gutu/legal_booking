@@ -1,9 +1,14 @@
+'use client'
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
+import { useState } from "react";
+import { AnimatePresence } from "motion/react";
+import TalkModal from "../../_components/FormModal";
 
 const Home = ({ scrollToServices } : {scrollToServices: () => void}) => {
   const t = useTranslations("homeHero");
+  const [modalOpen, setModalOpen] = useState(false)
 
   return (
     <div className={cn("flex bg-[#003D35] px-[80px] py-[40px]", "max-xl:px-[10px] max-lg:flex-col-reverse max-md:px-4 max-md:py-[40px]")}>
@@ -21,7 +26,7 @@ const Home = ({ scrollToServices } : {scrollToServices: () => void}) => {
           <p className="text-white">{t("callNow")}</p>
         </div>
         <div className="flex items-center justify-center">
-          <div className="md:hidden font-inter max-w-[300px] box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
+          <div onClick={() => setModalOpen(true)} className="md:hidden font-inter max-w-[300px] box-border border-1 border-white bg-white text-[#003D35] rounded-full px-8 py-5 font-semibold text-sm align-middle text-center">
             {t("contact")}
           </div>
         </div>
@@ -42,6 +47,9 @@ const Home = ({ scrollToServices } : {scrollToServices: () => void}) => {
         height={500}
         className={cn("absolute top-[0px] left-[-200px]", "max-xl:hidden")}
       />
+      <AnimatePresence>
+        {modalOpen && <TalkModal isOpen={modalOpen} setIsOpen={setModalOpen} />}
+      </AnimatePresence>
     </div>
   )
 }
