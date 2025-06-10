@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
 import { AnimatePresence } from "motion/react";
@@ -62,7 +63,10 @@ export default function Footer() {
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
                 <div className="flex items-center gap-4">
                     <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")} className="button-animation" />
-                    <p className="text-[#ffffff7e] text-[15px] max-[600px]:text-center">{t("copyRight")}</p>
+                    <p className="text-[#ffffff7e] text-[15px] max-[600px]:text-center">{{t.rich("copyRight", {
+                        link: (chunks) => <Link href={"https://www.quant-apps.com/"} target="blank">{chunks}</Link>
+                    })}</p>
+                    
                 </div>
             </div>
             <AnimatePresence>
