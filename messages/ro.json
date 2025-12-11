@@ -6,7 +6,7 @@
     "title": "Servicii legale rapide, clare și fără complicații",
     "description": "Suntem alături de afacerea ta cu soluții juridice moderne: consultanță online, contracte personalizate, înregistrări rapide și suport complet pe bază de abonament.",
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 60911862",
+    "callNow": "sună acum +373 68 159 199",
     "contact": "Contactează-ne",
     "imageAlt": "imagine principală",
     "linesAlt": "decor linii",
@@ -22,7 +22,7 @@
       "Consultanță juridică pentru afaceri și familie"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 60911862",
+    "callNow": "sună acum +373 68 159 199",
     "consultation": "Online consultație!",
     "imageAlt": "echipa",
     "consultationAlt": "consultație online",
@@ -99,7 +99,7 @@
       "Servicii personalizate"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum +373 60911862",
+    "callNow": "sună acum +373 68 159 199",
     "imageAlt": "întâlnire de afaceri",
     "iconAlt": "bifat",
     "imageSrc": "/images/meetingro.png"
@@ -155,7 +155,7 @@
       },
       {
         "question": "Cum pot beneficia de consultanță juridică online?",
-        "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 60911862."
+        "answer": "Puteți programa o consultație rapidă pe numărul de telefon +373 68 159 199."
       },
       {
         "question": "Puteți reprezenta firma mea în instanță sau în fața organelor de stat?",
@@ -165,19 +165,19 @@
   },
   "header": {
     "logoAlt": "siglă",
-    "phone": "+373 60911862",
+    "phone": "+373 68 159 199",
     "contactBtn": "Contactează-ne"
   },
   "footer": {
     "pfpAlt": "poza profil advokat",
-    "profileName": "Veaceslav Soltan",
+    "profileName": "Maxim Anton",
     "profileRole": "Jurist",
     "phoneIconAlt": "icon telefon",
     "mailIconAlt": "icon scrisoare",
     "callUs": "Sună-ne:",
     "mailUs": "Scrie-ne:",
-    "phoneNumber": "+373 60911862",
-    "email": "veaceslav@juristonline.md",
+    "phoneNumber": "+373 68 159 199",
+    "email": "anton.maxim@nobilauto.md",
     "ctaTitle": "Vorbește cu un jurist chiar astăzi",
     "ctaDescription": "Ai o întrebare juridică?\nProgramează o consultație și primește răspuns rapid de la echipa noastră.",
     "contactBtn": "Contactează-ne",
