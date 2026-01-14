@@ -62,7 +62,20 @@ export default function Footer() {
                 </div>
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
                 <div className="flex items-center gap-4">
-                    <Image src="/svgs/insta.svg" width={41} height={41} alt={t("instagramAlt")} className="button-animation" />
+                    <a
+                        href="https://www.instagram.com/juristonline.md/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Image
+                            src="/svgs/insta.svg"
+                            width={41}
+                            height={41}
+                            alt={t("instagramAlt")}
+                            className="button-animation"
+                        />
+                    </a>
+
                     <p className="text-[#ffffff7e] text-[15px] max-[600px]:text-center">{t.rich("copyRight", {
                         link: (chunks) => <Link className="hover:text-[#836FFF] transition-all duration-700" href={"https://www.quant-apps.com/"} target="blank">{chunks}</Link>
                     })}</p>
