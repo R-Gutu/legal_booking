@@ -14,6 +14,7 @@ const inter = Inter({
 })
 
 import { Playfair_Display } from 'next/font/google';
+import Script from "next/script";
 
 
 const playfair = Playfair_Display({
@@ -41,6 +42,20 @@ export default async function RootLayout({
        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body>
+      <Script
+          id="gtm"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NK5JKM8C"
+      />
+
+      <noscript>
+        <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NK5JKM8C"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+        />
+      </noscript>
         <LazyMotion features={domAnimation}>
           <NextIntlClientProvider >
             <Header />
