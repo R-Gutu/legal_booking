@@ -1,69 +1,82 @@
 import type { Metadata } from "next";
-import { domAnimation, LazyMotion } from "motion/react"
+import { domAnimation, LazyMotion } from "motion/react";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from "next/font/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import { getLocale } from "next-intl/server";
-import Head from "next/head";
-
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter'
-})
-
-import { Playfair_Display } from 'next/font/google';
 import Script from "next/script";
 
+const inter = Inter({
+    subsets: ["latin", "cyrillic"],
+    variable: "--font-inter",
+});
 
 const playfair = Playfair_Display({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-playfair'
+    subsets: ["latin", "cyrillic"],
+    variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
-  title: "Consultanță juridică online în Moldova.",
-  description: "JuristOnline.md – răspunsuri legale rapide, sigure și la preț concret.",
-  icons: {
-    icon: '/favicon.ico'
-  }
+    title: "Consultanță juridică online în Moldova.",
+    description:
+        "JuristOnline.md – răspunsuri legale rapide, sigure și la preț concret.",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
-  return (
-    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
-      <Head>
-       <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
-      <body>
-      <Script
-          id="gtm"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-NK5JKM8C"
-      />
+                                             children,
+                                         }: {
+    children: React.ReactNode;
+}) {
+    const locale = await getLocale();
 
-      <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NK5JKM8C"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
+    return (
+        <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+        <body>
+
+        {/* Google Tag Manager */}
+        <Script
+            id="gtm-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+                __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-NK5JKM8C');
+            `,
+            }}
         />
-      </noscript>
+        {/* End GTM */}
+
+        {/* GTM NoScript */}
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-NK5JKM8C"
+                height="0"
+                width="0"
+                style={{ display: "none", visibility: "hidden" }}
+            />
+        </noscript>
+        {/* End GTM NoScript */}
+
         <LazyMotion features={domAnimation}>
-          <NextIntlClientProvider >
-            <Header />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
+            <NextIntlClientProvider>
+                <Header />
+                {children}
+                <Footer />
+            </NextIntlClientProvider>
         </LazyMotion>
-      </body>
-    </html>
-  );
+
+        </body>
+        </html>
+    );
 }
