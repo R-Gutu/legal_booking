@@ -6,9 +6,13 @@ import { useTranslations } from "next-intl"
 import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 import FormModal from './FormModal'
+import { Link as LocaleLink } from "@/i18n/navigation"
 
-export default function Footer() {
+export type FooterLink = { href: string; title: string }
+
+export default function Footer({ serviceLinks, articleLinks }: { serviceLinks: FooterLink[]; articleLinks: FooterLink[] }) {
     const t = useTranslations("footer");
+    const tPages = useTranslations("pages");
     const [modalOpen, setModalOpen] = useState(false)
 
     return (
@@ -30,14 +34,14 @@ export default function Footer() {
 
                         <div className="flex flex-col gap-10 mt-10 mb-20">
                             <div className="flex items-start gap-3">
-                                <Image src="/svgs/phone.svg" width={24} height={24} alt={t("phoneIconAlt")} />
+                                <Image src="/svgs/phone.svg" width={24} height={24} alt="" />
                                 <div>
                                     <p className="text-[#ffffffaa] font-inter text-[14px]">{t("callUs")}</p>
                                     <p className="text-white font-playfair text-[16px] font-bold">{t("phoneNumber")}</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <Image src="/svgs/letter.svg" width={24} height={24} alt={t("mailIconAlt")} />
+                                <Image src="/svgs/letter.svg" width={24} height={24} alt="" />
                                 <div>
                                     <p className="text-[#ffffffaa] font-inter text-[14px]">{t("mailUs")}</p>
                                     <p className="text-white font-playfair text-[16px] font-bold">{t("email")}</p>
@@ -61,6 +65,34 @@ export default function Footer() {
                     <LanguageSwitcher className="absolute top-[35%] right-[30%] min-[690px]:hidden" />
                 </div>
                 <p className="text-[#ffffff7e] w-[420px] max-[600px]:w-auto text-wrap">{t("footerDescription")}</p>
+                <nav aria-label={tPages("services")}>
+                    <LocaleLink href="/servicii" className="text-white font-semibold hover:text-[#D2DE32] transition-colors">
+                        {tPages("services")}
+                    </LocaleLink>
+                    <ul className="grid grid-cols-2 max-[800px]:grid-cols-1 gap-x-10 gap-y-2 mt-3 max-w-[820px]">
+                        {serviceLinks.map((link) => (
+                            <li key={link.href}>
+                                <LocaleLink href={link.href} className="text-[#ffffff7e] text-[15px] hover:text-[#D2DE32] transition-colors">
+                                    {link.title}
+                                </LocaleLink>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <nav aria-label={tPages("articles")}>
+                    <LocaleLink href="/articole" className="text-white font-semibold hover:text-[#D2DE32] transition-colors">
+                        {tPages("articles")}
+                    </LocaleLink>
+                    <ul className="flex flex-col gap-2 mt-3 max-w-[820px]">
+                        {articleLinks.map((link) => (
+                            <li key={link.href}>
+                                <LocaleLink href={link.href} className="text-[#ffffff7e] text-[15px] hover:text-[#D2DE32] transition-colors">
+                                    {link.title}
+                                </LocaleLink>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
                 <div className="flex items-center gap-4">
                     <a
                         href="https://www.instagram.com/juristonline.md/"

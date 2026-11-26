@@ -1,15 +1,19 @@
 {
+  "metadata": {
+    "title": "Consultanță juridică online în Moldova | JuristOnline.md",
+    "description": "Jurist online în Moldova: consultanță juridică rapidă, contracte personalizate, înregistrare și lichidare SRL în 3 zile, abonamente pentru companii.",
+    "ogImageAlt": "JuristOnline.md – consultanță juridică online în Moldova"
+  },
   "test": {
     "testing": "romanian"
   },
   "homeHero": {
-    "title": "Servicii legale rapide, clare și fără complicații",
-    "description": "Suntem alături de afacerea ta cu soluții juridice moderne: consultanță online, contracte personalizate, înregistrări rapide și suport complet pe bază de abonament.",
+    "title": "Servicii juridice rapide și clare în Moldova",
+    "description": "Suntem alături de afacerea ta cu soluții juridice moderne: consultanță juridică online, contracte personalizate, înregistrare rapidă a firmei și suport complet pe bază de abonament.",
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum 060 366 664",
+    "callNow": "sună acum 060 366 660",
     "contact": "Contactează-ne",
-    "imageAlt": "imagine principală",
-    "linesAlt": "decor linii",
+    "imageAlt": "Jurist – consultanță juridică online în Moldova",
     "imageSrc": "/images/homero.png"
   },
   "teamHero": {
@@ -22,15 +26,13 @@
       "Consultanță juridică pentru afaceri și familie"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum 060 366 664",
+    "callNow": "sună acum 060 366 660",
     "consultation": "Online consultație!",
-    "imageAlt": "echipa",
-    "consultationAlt": "consultație online",
-    "linesAlt": "linii decorative",
-    "starAlt": "stea"
+    "imageAlt": "Juriști discutând documente cu un client",
+    "consultationAlt": "consultație online"
   },
   "services": {
-    "title": "Serviciile noastre",
+    "title": "Serviciile noastre juridice",
     "description": "Găsești tot sprijinul juridic de care ai nevoie, într-un singur loc. Indiferent dacă ai nevoie de asistență pentru documente, reprezentare în instanță sau sprijin rapid online — echipa noastră este gata să intervină.",
     "items": [
       {
@@ -99,9 +101,8 @@
       "Servicii personalizate"
     ],
     "seeServices": "Vezi servicii",
-    "callNow": "sună acum 060 366 664",
-    "imageAlt": "întâlnire de afaceri",
-    "iconAlt": "bifat",
+    "callNow": "sună acum 060 366 660",
+    "imageAlt": "Juriști la o întâlnire cu o clientă – 15 ani de experiență, 99% rată de succes",
     "imageSrc": "/images/meetingro.png"
   },
   "vouches": {
@@ -132,7 +133,9 @@
         "text": "„Am avut plăcerea de a colabora cu echipa LegalBooking și pot afirma cu încredere că sunt printre cei mai buni din domeniu. Profesionalismul, dedicarea și soluțiile clare oferite mi-au depășit așteptările. Sunt recunoscător pentru sprijinul lor constant.”",
         "title": "Andrei M., antreprenor"
       }
-    ]
+    ],
+    "next": "Recomandarea următoare",
+    "previous": "Recomandarea anterioară"
   },
   "faq": {
     "title": "Întrebări frecvente",
@@ -155,7 +158,7 @@
       },
       {
         "question": "Cum pot beneficia de consultanță juridică online?",
-        "answer": "Puteți programa o consultație rapidă pe numărul de telefon 060 366 664."
+        "answer": "Puteți programa o consultație rapidă pe numărul de telefon 060 366 660."
       },
       {
         "question": "Puteți reprezenta firma mea în instanță sau în fața organelor de stat?",
@@ -164,26 +167,24 @@
     ]
   },
   "header": {
-    "logoAlt": "siglă",
-    "phone": "060 366 664",
+    "logoAlt": "JuristOnline.md",
+    "phone": "060 366 660",
     "contactBtn": "Contactează-ne"
   },
   "footer": {
-    "pfpAlt": "poza profil advokat",
+    "pfpAlt": "Veaceslav Soltan, jurist JuristOnline.md",
     "profileName": "Veaceslav Soltan",
     "profileRole": "Jurist",
-    "phoneIconAlt": "icon telefon",
-    "mailIconAlt": "icon scrisoare",
     "callUs": "Sună-ne:",
     "mailUs": "Scrie-ne:",
-    "phoneNumber": "060 366 664",
+    "phoneNumber": "060 366 660",
     "email": "veaceslav@juristonline.md",
     "ctaTitle": "Vorbește cu un jurist chiar astăzi",
     "ctaDescription": "Ai o întrebare juridică?\nProgramează o consultație și primește răspuns rapid de la echipa noastră.",
     "contactBtn": "Contactează-ne",
-    "logoAlt": "sigla footer",
+    "logoAlt": "JuristOnline.md",
     "footerDescription": "Oferim soluții juridice rapide și eficiente pentru afacerea ta. Consultanță, redactare acte, înregistrări și reprezentare — totul într-un singur loc.",
-    "instagramAlt": "logo instagram",
+    "instagramAlt": "Instagram JuristOnline.md",
     "copyRight": "© 2026 Legalbooking. Toate drepturile sunt rezervate. <link>Creat de Quant-Apps.</link>"
   },
   "contactForm": {
@@ -223,7 +224,8 @@
     "notifications": {
       "success": "Formular trimis cu succes!",
       "error": "Trimiterea formularului a eșuat. Vă rugăm să încercați din nou."
-    }
+    },
+    "close": "Închide formularul"
   },
   "formAlert": {
     "success": "Am primit mesajul tău! Echipa noastră îți va răspunde în cel mai scurt timp.",
@@ -232,5 +234,32 @@
   "dropzone": {
     "browse": "Atașați fișierele aici pentru",
     "dragFiles": "încărcare"
+  },
+  "pages": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "articles": "Articole",
+    "breadcrumbLabel": "Navigare",
+    "requestConsultation": "Cere o consultație",
+    "callNow": "sună acum 060 366 660",
+    "howWeWork": "Cum lucrăm",
+    "faqTitle": "Întrebări frecvente",
+    "relatedServices": "Servicii conexe",
+    "allServices": "Toate serviciile",
+    "learnMore": "Află mai multe",
+    "servicesIndexTitle": "Servicii juridice în Moldova",
+    "servicesIndexIntro": "De la înregistrarea firmei și redactarea contractelor până la reprezentarea în instanță – aici găsești serviciile noastre juridice pentru afaceri și persoane fizice.",
+    "servicesMetaTitle": "Servicii juridice în Moldova | JuristOnline.md",
+    "servicesMetaDescription": "Înregistrare și lichidare SRL, contracte, reprezentare în instanță, mărci la AGEPI, dreptul familiei și abonament juridic pentru firme.",
+    "articlesIndexTitle": "Articole și ghiduri juridice",
+    "articlesIndexIntro": "Răspunsuri clare la întrebările juridice pe care ni le pun cel mai des clienții: despre firme, contracte și familie.",
+    "articlesMetaTitle": "Articole și ghiduri juridice | JuristOnline.md",
+    "articlesMetaDescription": "Ghiduri juridice pentru Moldova: cum deschizi un SRL, SRL sau ÎI, divorțul la Starea Civilă sau în instanță și alte întrebări frecvente.",
+    "readArticle": "Citește articolul",
+    "author": "Autor",
+    "published": "Publicat",
+    "disclaimer": "Informațiile din acest articol au caracter general și nu înlocuiesc o consultație juridică pentru situația ta concretă.",
+    "relatedServiceTitle": "Te putem ajuta",
+    "usefulArticles": "Articole utile"
   }
 }

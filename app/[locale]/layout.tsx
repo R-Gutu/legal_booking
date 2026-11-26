@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Inter, Playfair_Display } from "next/font/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import { getLocale } from "next-intl/server";
+import SiteJsonLd from "./_components/SiteJsonLd";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Script from "next/script";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { buildPageMetadata } from "@/lib/seo";
+import { getArticles } from "@/lib/content/articles";
+import { getServices } from "@/lib/content/services";
 
 const inter = Inter({
     subsets: ["latin", "cyrillic"],
@@ -18,21 +24,58 @@ const playfair = Playfair_Display({
     variable: "--font-playfair",
 });
 
-export const metadata: Metadata = {
-    title: "Consultanță juridică online în Moldova.",
-    description:
-        "JuristOnline.md – răspunsuri legale rapide, sigure și la preț concret.",
-    icons: {
-        icon: "/favicon.ico",
-    },
-};
+// Metadata pentru pagina principală; subpaginile își suprascriu propria metadata
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const requested = (await params).locale;
+    const locale = hasLocale(routing.locales, requested)
+        ? requested
+        : routing.defaultLocale;
+    const t = await getTranslations({ locale, namespace: "metadata" });
+
+    return {
+        ...buildPageMetadata({
+            locale,
+            path: "",
+            title: t("title"),
+            description: t("description"),
+            ogImageAlt: t("ogImageAlt"),
+        }),
+        icons: {
+            icon: "/favicon.ico",
+        },
+    };
+}
+
+// /ro și /ru se generează la build, ca pagini statice
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
                                              children,
+                                             params,
                                          }: {
     children: React.ReactNode;
+    params: Promise<{ locale: string }>;
 }) {
-    const locale = await getLocale();
+    const { locale } = await params;
+    if (!hasLocale(routing.locales, locale)) notFound();
+    // limba vine din URL, nu din headere, deci paginile pot fi randate static
+    setRequestLocale(locale);
+
+    // doar titlul și adresa fiecărei pagini ajung în footer (client), nu tot conținutul
+    const serviceLinks = getServices(locale).map((service) => ({
+        href: `/servicii/${service.slug}`,
+        title: service.title,
+    }));
+    const articleLinks = getArticles(locale).map((article) => ({
+        href: `/articole/${article.slug}`,
+        title: article.title,
+    }));
 
     return (
         <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
@@ -68,11 +111,13 @@ export default async function RootLayout({
         </noscript>
         {/* End GTM NoScript */}
 
+        <SiteJsonLd locale={locale} />
+
         <LazyMotion features={domAnimation}>
             <NextIntlClientProvider>
                 <Header />
                 {children}
-                <Footer />
+                <Footer serviceLinks={serviceLinks} articleLinks={articleLinks} />
             </NextIntlClientProvider>
         </LazyMotion>
 
